@@ -1,0 +1,45 @@
+.menu-side-bar {
+    width: 18%;
+    display: block;
+    background-color: #fff;
+    color: black;
+    text-align: center;
+    box-shadow:0 0px 4px 4px rgba(0,0,0,.1);
+}
+
+.menu-side-bar h2 {
+    font-size: 20px;
+    border-bottom: 1px solid #80BEE2;
+    width: 180px;
+    padding-top: 40px;
+    text-align: center;
+    margin-left: 15px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.menu-side-bar a {
+    text-decoration: none;
+}
+
+.side-items {
+    padding: 24px 32px
+}
+
+.side-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.side-item-text {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+@media (max-width: 1240px) {
+    .menu-side-bar {
+        display: none;
+    }
+}
