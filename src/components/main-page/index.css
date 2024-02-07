@@ -6,6 +6,12 @@
     flex-direction: column;
 }
 
+:-moz-placeholder,
+::-moz-placeholder {
+color: #a9a9a9;
+opacity: 1;
+}
+
 .options-container {
     display: flex;
     align-items: center;
