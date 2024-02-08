@@ -1,10 +1,11 @@
 import './index.css'
 import { useState, useEffect } from 'react';
+import { product } from '../../constants/server';
 
 function MainPage() {
     const [data, setData] = useState([])
     const fetchData = async () => {
-        const res = await fetch('http://localhost:3000/product')
+        const res = await fetch(product)
         const data = await res.json()
         setData(data)
     }

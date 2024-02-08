@@ -1,10 +1,11 @@
 import './index.css'
 import { useState, useEffect } from 'react';
+import { user } from '../../constants/server';
 
 function NavBar() {
     const [data, setData] = useState({})
     const fetchData = async () => {
-        const res = await fetch('http://localhost:3000/user')
+        const res = await fetch(user)
         const data = await res.json()
         setData(data[0])
     }
