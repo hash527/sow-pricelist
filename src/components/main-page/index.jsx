@@ -1,9 +1,10 @@
 import './index.css'
-import { useState, useEffect } from 'react';
+import { useState, useEffect,useRef } from 'react';
 import { product } from '../../constants/server';
 
 function MainPage() {
     const [data, setData] = useState([])
+    const [value,setValue] = useState('')
     const fetchData = async () => {
         const res = await fetch(product)
         const data = await res.json()
@@ -17,14 +18,14 @@ function MainPage() {
         <section className="mt-10 main-price-list-container">
             <div className='options-container'>
                 <div className='prod-content'>
-                    <form className='search-bar'>
+                    <div className='search-bar'>
                         <input
                             className="search-box"
-                            id="title"
                             type="text"
-                            defaultValue=""
                             name="search"
                             placeholder="Search Product .."
+                            value = {value}
+                            onChange={(e)=>setValue(e.target.value)}
                         />
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +42,7 @@ function MainPage() {
                             <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
                             <path d="M21 21l-6 -6" />
                         </svg>
-                    </form>
+                    </div>
                 </div>
                 <div className='options'>
                     <button>

@@ -37,11 +37,13 @@ opacity: 1;
 
 .search-box {
     width: 90%;
-    padding: 2px 0 2px 0px;
+    padding: 2px 2px 2px 0px;
     margin-left: 2px;
     border: none !important;
     background-color: #fff;
+    color:#000;
     font-size: 16px;
+    outline: none;
 }
 
 .options {
